@@ -6,7 +6,7 @@ const App = () => {
 
   const [Items, setItems] = useState([]);
 
-  const itemEvent = (event) => {
+  const itemEvents = (event) => {
     setInputList(event.target.value);
   };
 
@@ -33,7 +33,7 @@ const App = () => {
           <ol>
             {/* <li>{inputList}</li> */}
 
-            {Item.map((itemVal) => {
+            {Items.map((itemVal) => {
               return <ToDoLists text={itemVal} />;
             })}
           </ol>
@@ -42,3 +42,5 @@ const App = () => {
     </>
   );
 };
+
+export default App;
